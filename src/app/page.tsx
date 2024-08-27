@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Footer from '@/components/Footer';
 import Feature from '@/components/Feature';
-import NavBar from '@/components/NavBar';
+import NavBar from '@/components/NavBar/NavBar';
 import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <div className=''>
+    <div className='bg-black'>
       <Hero />
       <Feature />
     </div>

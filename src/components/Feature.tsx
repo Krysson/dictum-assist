@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 
 const Feature = () => {
   return (
-    <section className='py-16  bg-gray-900 text-center text-veryLightGray'>
+    <section className='py-16  bg-black text-center text-veryLightGray'>
       <div className='container mx-auto px-4 text-center'>
         <h2 className='text-3xl font-bold mb-8'>Internal Search</h2>
         <p className='text-xl mb-8'>
