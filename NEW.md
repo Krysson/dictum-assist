@@ -15,12 +15,13 @@ This project aims to build a SaaS web application for legal professionals, inclu
 
 ## Tech Stack
 
-- Frontend: Next.js with TypeScript and React
+- Frontend: Next.js with TypeScript and Next.js app router
 - Backend: Next.js API routes
 - Database: PostgreSQL with Prisma ORM
-- Authentication: NextAuth.js
+- Authentication: NextAuth.js - Auth.js Beta
 - Vector Store: Upstash Vector
 - Caching: Upstash Redis
+- Upstash: RAGChat - https://upstash.com/docs/vector/sdks/rag-chat/gettingstarted
 - Payment Processing: Stripe
 - AI Model: OpenAI API (or similar)
 
@@ -28,27 +29,23 @@ This project aims to build a SaaS web application for legal professionals, inclu
 
 ```
 legal-ai-saas/
-├── pages/
-│   ├── api/
-│   │   ├── auth/
-│   │   ├── upload/
-│   │   ├── scrape/
-│   │   ├── chat.ts
-│   │   ├── subscription/
-│   │   └── webhooks/
-│   ├── _app.tsx
-│   ├── index.tsx
-│   ├── dashboard.tsx
-│   └── chat.tsx
-├── components/
-│   └── ChatInterface.tsx
 ├── prisma/
-│   └── schema.prisma
+│   ├── prisma.schema/
 ├── public/
-├── styles/
-├── lib/
-├── next.config.js
+│   └── images/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   ├── styles/
+│   ├── lib/
+├── next.config.mjs
 ├── package.json
+├── tailwind.config.ts
 └── tsconfig.json
 ```
 
@@ -65,7 +62,7 @@ legal-ai-saas/
 ## Examples
 
 1. Chat with website - https://github.com/upstash/rag-chat - https://upstash.com/docs/vector/sdks/rag-chat/gettingstarted
-2. chat with PDF - https://github.com/elliott-chong/chatpdf-yt - https://chatpdf-yt.vercel.app/
+2. Chat with PDF - https://github.com/elliott-chong/chatpdf-yt - https://chatpdf-yt.vercel.app/
 
 ## Next Steps
 
