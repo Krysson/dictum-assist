@@ -11,6 +11,7 @@
   "dependencies": {
     "@langchain/community": "^0.2.31",
     "@prisma/client": "^5.18.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "@upstash/rag-chat": "^1.4.0",
     "@upstash/redis": "^1.34.0",
     "@upstash/vector": "^1.1.5",
