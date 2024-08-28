@@ -4,11 +4,59 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-generator client {
-  provider = "prisma-client-js"
-}
-
+// File: prisma/schema.prisma
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String   @id @default(cuid())
+  name            String?
+  email           String   @unique
+  emailVerified   DateTime?
+  image           String?
+  subscriptionTier String   @default("Free")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  projects        Project[]
+  queries         Query[]
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  name      String
+  type      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  documents Document[]
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  type      String
+  content   String
+  summary   String?
+  iracSummary String?
+  createdAt DateTime @default(now())
+  expirationDate DateTime?
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id])
+}
+
+model Query {
+  id        String   @id @default(cuid())
+  content   String
+  response  String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+// TODO: Add AIModel and Organization models if needed for your use case

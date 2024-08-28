@@ -259,3 +259,87 @@ Future Expansion Possibilities:
 7. AI-powered case outcome prediction
 
 This revised masterplan provides a comprehensive overview of the AI-Powered Legal Research Assistant, incorporating the latest changes and additions. It serves as a flexible blueprint for development and can be further adjusted as the project evolves.
+
+# Structure
+
+```
+legal-ai-saas/
+├── prisma/
+│   └── schema.prisma
+├── public/
+│   └── images/
+│        └── bgTest.jpg
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── auth/
+│   │   │   │   └── [...nextauth]/
+│   │   │   │        └── route.ts
+│   │   │   ├── projects/
+│   │   │   │   └── route.ts
+│   │   │   ├── documents/
+│   │   │   │   ├── analyze/
+│   │   │   │   │   └── route.ts
+│   │   │   │   └── route.ts
+│   │   │   └── queries/
+│   │   │       └── route.ts
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   ├── pricing/
+│   │   │   └── page.tsx
+│   │   ├── project/
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx
+│   │   │   └── new/
+│   │   │       └── page.tsx
+│   │   ├── document/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── query/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Input.tsx
+│   │   │   └── navigation-menu.tsx
+│   │   ├── Layout.tsx
+│   │   ├── Feature.tsx
+│   │   ├── SubscriptionTier.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── icons.tsx
+│   │   ├── InputWithButtons.tsx
+│   │   ├── NavBar.tsx
+│   │   ├── DocumentAnalysis.tsx
+│   │   ├── DocumentUpload.tsx
+│   │   ├── QueryInput.tsx
+│   │   └── AIResponse.tsx
+│   ├── styles/
+│   │   └── tailwind.css
+│   ├── lib/
+│   │   ├── prisma.ts
+│   │   ├── utils.ts
+│   │   ├── auth.ts
+│   │   └── ai-service.ts
+│   └── types/
+│       └── index.ts
+├── next.config.mjs
+├── .env.local
+├── eslintrc.json
+├── .gitignore
+├── components.json
+├── LOG.md
+├── masterplan.md
+├── next-env.d.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+```
