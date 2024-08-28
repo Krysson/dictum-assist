@@ -20,3 +20,4 @@ pnpm install
 - Shadcn Ui installed
 
 - Prisma ORM installed
+- hyperui.dev
