@@ -3,8 +3,17 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs';
+import UserName from '../lib/username';
 
-const NavBar = () => {
+function NavBar() {
   return (
     <header className=' bg-gray-950'>
       <div className=' px-4 sm:px-6 lg:px-8'>
@@ -80,46 +89,66 @@ const NavBar = () => {
               </ul>
             </nav>
 
+            {/* Sign-in and Sign up functionality */}
+
             <div className='flex items-center gap-4'>
               <div className='sm:flex sm:gap-4'>
-                <Button
-                  asChild
-                  className='rounded-md border-blue-600 bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-blue-600/40 hover:text-white focus:outline-none focus:ring active:text-opacity-75'>
-                  <Link href='#'>Login</Link>
-                </Button>
+                <SignedOut>
+                  <SignInButton mode='modal'>
+                    <Button
+                      variant='default'
+                      size='default'
+                      className='rounded-md bg-transparent text-blue-600 border-blue-600/40 border-2 px-5 py-2.5 text-sm font-medium hover:bg-blue-600/40 active:bg-blue-500'>
+                      {/* <LogIn className='mr-2' /> THESE ARE ICONS FROM LUCIDE-REACT THAT I HAVE NOT INSTALLED */}
+                      Sign In
+                    </Button>
+                  </SignInButton>
 
-                <div className='hidden sm:flex'>
-                  <Button
-                    asChild
-                    className='rounded-md bg-transparent text-blue-600 border-blue-600/40 border-2 px-5 py-2.5 text-sm font-medium hover:bg-blue-600/40 active:bg-blue-500'>
-                    <Link href='#'>Register</Link>
-                  </Button>
+                  <SignUpButton mode='modal'>
+                    <Button
+                      variant='default'
+                      size='default'
+                      className='rounded-md border-blue-600 bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-blue-600/40 hover:text-white focus:outline-none focus:ring active:text-opacity-75'>
+                      {/* <UserPlus className='mr-2' /> THESE ARE ICONS FROM LUCIDE-REACT THAT I HAVE NOT INSTALLED  */}
+                      Sign Up
+                    </Button>
+                  </SignUpButton>
+                </SignedOut>
+              </div>
+              <SignedIn>
+                <div className='flex justify-center items-center'>
+                  <span className='mr-6  text-purple-600'>
+                    <UserName />
+                  </span>
+                  <UserButton afterSignOutUrl='/' />
                 </div>
-              </div>
+              </SignedIn>
+            </div>
 
-              <div className='block md:hidden'>
-                <Button className='rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='size-5'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                    strokeWidth='2'>
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      d='M4 6h16M4 12h16M4 18h16'
-                    />
-                  </svg>
-                </Button>
-              </div>
+            {/* Hamburger menu */}
+
+            <div className='block md:hidden'>
+              <Button className='rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='size-5'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                  strokeWidth='2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M4 6h16M4 12h16M4 18h16'
+                  />
+                </svg>
+              </Button>
             </div>
           </div>
         </div>
       </div>
     </header>
   );
-};
+}
 
 export default NavBar;
