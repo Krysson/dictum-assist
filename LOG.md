@@ -12,7 +12,18 @@ pnpm add <pkg>
 pnpm install
 # same as npm install to begin project and isntall package.json
 git checkout <remotebranch>
+
 ```
+
+## default branch is
+
+this will push to production server -vercel
+
+```
+prod
+```
+
+---
 
 - Clerk Auth installed
 
