@@ -11,6 +11,7 @@ pnpm add <pkg>
 # same as npm install <pgk>
 pnpm install
 # same as npm install to begin project and isntall package.json
+git checkout <remotebranch>
 ```
 
 - Next-Auth installed
