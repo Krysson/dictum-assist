@@ -1,5 +1,7 @@
 # Legal AI SaaS Project Summary
 
+### check LOG.md and masterplam.md for info
+
 ## Project Overview
 
 This project aims to build a SaaS web application for legal professionals, including lawyers, paralegals, law students, and professors. The application will provide AI-powered chat functionality, allowing users to interact with uploaded PDFs and web content.
