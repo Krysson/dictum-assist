@@ -3,16 +3,11 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 const isProtectedRoute = createRouteMatcher(['/dashboard(.*)', '/forum(.*)', '/admin(.*)']);
 
+// From here:   https://clerk.com/docs/references/nextjs/clerk-middleware#protect-routes-based-on-user-authentication-status
+
+// Protects routes on AUTHENTICATION Status NOT AUTHORIZATION status
 export default clerkMiddleware((auth, req) => {
-  // Restrict admin routes to users with specific permissions
-  if (isProtectedRoute(req)) {
-    auth().protect(has => {
-      return (
-        has({ permission: 'org:sys_memberships:manage' }) ||
-        has({ permission: 'org:sys_domains_manage' })
-      );
-    });
-  }
+  if (isProtectedRoute(req)) auth().protect();
 });
 
 export const config = {
