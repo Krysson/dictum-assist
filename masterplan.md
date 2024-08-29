@@ -1,4 +1,4 @@
-# AI-Powered Legal Research Assistant Masterplan (Revised)
+# AI-Powered Legal Research Assistant Masterplan (v0.2-08292024)
 
 ## 1. App Overview and Objectives
 
@@ -88,11 +88,12 @@ The app is designed to be broadly applicable across the legal profession, with s
 3. Database:
 
    - PostgreSQL
+   - Prisma as the ORM
 
 4. Authentication:
 
-   - Next-Auth for user authentication
-   - Social authentication (Google, GitHub) enabled
+   - Clerk for user authentication and management
+   - Social authentication options available through Clerk
 
 5. AI Integration:
 
@@ -180,11 +181,12 @@ The app is designed to be broadly applicable across the legal profession, with s
 ## 7. Security Considerations
 
 - End-to-end encryption for data in transit and at rest
-- Multi-factor authentication by default for all accounts
+- Multi-factor authentication provided by Clerk
 - Regular security audits
 - Compliance with legal data protection standards
 - Clear data retention and deletion policies
 - User control over data privacy settings
+- Leverage Clerk's built-in security features for user management
 
 ## 8. Development Phases
 
@@ -272,9 +274,6 @@ legal-ai-saas/
 ├── src/
 │   ├── app/
 │   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   └── [...nextauth]/
-│   │   │   │        └── route.ts
 │   │   │   ├── projects/
 │   │   │   │   └── route.ts
 │   │   │   ├── documents/
@@ -298,6 +297,12 @@ legal-ai-saas/
 │   │   ├── query/
 │   │   │   └── [id]/
 │   │   │       └── page.tsx
+│   │   ├── sign-in/
+│   │   │   └── [[...sign-in]]/
+│   │   │         └── page.tsx
+│   │   ├── sign-up/
+│   │   │   └── [[...sign-up]]/
+│   │   │         └── page.tsx
 │   │   ├── favicon.ico
 │   │   ├── page.tsx
 │   │   ├── layout.tsx
@@ -326,8 +331,9 @@ legal-ai-saas/
 │   │   ├── utils.ts
 │   │   ├── auth.ts
 │   │   └── ai-service.ts
-│   └── types/
-│       └── index.ts
+│   ├── types/
+│   │   └── index.ts
+│   └── middleware.ts
 ├── next.config.mjs
 ├── .env.local
 ├── eslintrc.json

@@ -15,7 +15,7 @@ const Hero = () => {
       <div className='mx-auto max-w-screen-xl px-4 pb-36 pt-32 sm:pb-16 sm:pt-16 lg:flex lg:h-screen lg:items-center'>
         <div className='mx-auto max-w-3xl text-center'>
           <h1 className='bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-7xl'>
-            Only Relevant Data <br /> <span className='sm:block'>From Anywhere.</span>
+            dictumAI <br /> <span className='sm:block'>Only Relevant Data.</span>
             <span className='sm:block sm:h-28'> Together. </span>
           </h1>
 
