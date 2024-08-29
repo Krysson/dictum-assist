@@ -14,11 +14,13 @@ pnpm install
 git checkout <remotebranch>
 ```
 
-- Next-Auth installed
-
-  - as Auth.js BETA
+- Clerk Auth installed
 
 - Shadcn Ui installed
 
 - Prisma ORM installed
+
 - hyperui.dev
+- anthropic AI SDK
+- OpenAI SDK
+- upstash RAG Chat

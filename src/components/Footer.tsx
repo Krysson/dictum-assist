@@ -287,7 +287,7 @@ const Footer = () => {
         </div>
 
         <p className='text-center text-xs text-gray-300 dark:text-gray-400'>
-          &copy; 2022. dictumAssistAI. All rights reserved.
+          &copy; 2024. dictumAssistAI. All rights reserved.
         </p>
       </div>
     </footer>
