@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import FooterLinks from './FooterLinks';
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-950'>
-      <div className='mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+    <footer className='bg-gray-950 '>
+      <div className='mx-auto max-w-screen-8xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8 '>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 '>
           <div>
             <div className='flex-1 md:flex md:items-center md:gap-12 '>
               <Link
@@ -139,153 +140,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4'>
-            <div>
-              <p className='font-medium text-gray-100 dark:text-white'>Services</p>
-
-              <ul className='mt-6 space-y-4 text-sm'>
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    1on1 Coaching
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Company Review
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Accounts Review
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    HR Consulting
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    SEO Optimisation
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className='font-medium text-gray-100 dark:text-white'>Company</p>
-
-              <ul className='mt-6 space-y-4 text-sm'>
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    About
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Meet the Team
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Accounts Review
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className='font-medium text-gray-100 dark:text-white'>Helpful Links</p>
-
-              <ul className='mt-6 space-y-4 text-sm'>
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Contact
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    FAQs
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Live Chat
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className='font-medium text-gray-100 dark:text-white'>Legal</p>
-
-              <ul className='mt-6 space-y-4 text-sm'>
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Accessibility
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Returns Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Refund Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href='#'
-                    className='text-gray-100 transition hover:opacity-75 dark:text-gray-200'>
-                    Hiring Statistics
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className=' '>
+            <FooterLinks />
           </div>
         </div>
-
         <p className='text-center text-xs text-gray-300 dark:text-gray-400'>
           &copy; 2024. dictumAssistAI. All rights reserved.
         </p>
