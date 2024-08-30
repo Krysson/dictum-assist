@@ -1,4 +1,5 @@
 // File: src/components/QueryInput.tsx
+'use client'
 import React, { useState } from 'react';
 import AIResponse from './AIResponse';
 
