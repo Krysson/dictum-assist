@@ -42,6 +42,7 @@ const config = {
         kashmirDark: '#614385',
         mountainRockLight: '#868f96',
         mountainRockDark: '#596164',
+        myOrange: '#FF5349',
 
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
