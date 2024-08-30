@@ -19,11 +19,11 @@ const Feature = () => {
 
         <div className='mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -46,11 +46,11 @@ const Feature = () => {
           </Link>
 
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -73,11 +73,11 @@ const Feature = () => {
           </Link>
 
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -100,11 +100,11 @@ const Feature = () => {
           </Link>
 
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -127,11 +127,11 @@ const Feature = () => {
           </Link>
 
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -154,11 +154,11 @@ const Feature = () => {
           </Link>
 
           <Link
-            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-600/20 hover:shadow-pink-600/40'
+            className='block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-myOrange/20 hover:shadow-myOrange/40'
             href='#'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='size-10 text-pink-500'
+              className='size-10 text-myOrange'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'>
@@ -184,8 +184,8 @@ const Feature = () => {
         <div className='mt-12 text-center'>
           <Button
             asChild
-            className='rounded-md bg-pink-700 text-grey-100 border-pink-700 border-2 w-72  text-lg font-bold hover:bg-pink-600/40 active:bg-pink-500'>
-            <Link href='#'>Register</Link>
+            className='rounded-md bg-myOrange/90 text-grey-100 border-myOrange/90 border-2 w-72  text-lg font-bold  hover:bg-myOrange/70 active:bg-myOrange'>
+            <Link href='#'>Get Started</Link>
           </Button>
         </div>
       </div>
