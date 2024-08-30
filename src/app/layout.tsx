@@ -1,13 +1,14 @@
 // src/app/layout.tsx
 import { ClerkProvider } from '@clerk/nextjs';
 import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'dictumAI',
   description: 'Not everything is Dictum, but we can help you find it.'
 };
