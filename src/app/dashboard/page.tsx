@@ -1,36 +1,53 @@
 // File: src/app/dashboard/page.tsx
-import React from 'react';
-import { auth } from '@clerk/nextjs/server';
-import prisma from '@/lib/prisma';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import DocumentUpload from '@/components/DocumentUpload';
 import QueryInput from '@/components/QueryInput';
 
-type ProjectWithDocuments = Awaited<ReturnType<typeof getProjects>>[number];
-type RecentQuery = Awaited<ReturnType<typeof getRecentQueries>>[number];
+type Project = {
+  id: string;
+  name: string;
+  type: string;
+  documents: { id: string }[];
+};
 
-async function getProjects(userId: string) {
-  return await prisma.project.findMany({
-    where: { userId },
-    include: { documents: true }
-  });
-}
+type Query = {
+  id: string;
+  content: string;
+  response: string;
+  createdAt: string;
+};
 
-async function getRecentQueries(userId: string) {
-  return await prisma.query.findMany({
-    where: { userId },
-    orderBy: { createdAt: 'desc' },
-    take: 5
-  });
-}
+export default function Dashboard() {
+  const router = useRouter();
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [recentQueries, setRecentQueries] = useState<Query[]>([]);
 
-export default async function Dashboard() {
-  const { userId } = auth();
-  if (!userId) {
-    return <div>Please log in to view your dashboard.</div>;
-  }
+  useEffect(() => {
+    // Fetch projects and queries here
+    const fetchData = async () => {
+      try {
+        const projectsResponse = await fetch('/api/projects');
+        const queriesResponse = await fetch('/api/queries');
 
-  const projects: ProjectWithDocuments[] = await getProjects(userId);
-  const recentQueries: RecentQuery[] = await getRecentQueries(userId);
+        if (projectsResponse.ok && queriesResponse.ok) {
+          const projectsData = await projectsResponse.json();
+          const queriesData = await queriesResponse.json();
+          setProjects(projectsData);
+          setRecentQueries(queriesData);
+        } else {
+          // Handle error
+          console.error('Failed to fetch data');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className='container mx-auto px-4 py-8'>
