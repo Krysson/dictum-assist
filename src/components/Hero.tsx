@@ -13,15 +13,20 @@ const Hero = () => {
         backgroundPosition: 'center'
       }}>
       <div className='mx-auto max-w-screen-xl px-4 pb-36 pt-32 sm:pb-16 sm:pt-16 lg:flex lg:h-screen lg:items-center'>
-        <div className='mx-auto max-w-3xl text-center'>
-          <h1 className='bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-7xl'>
-            dictumAI <br /> <span className='sm:block'>Only Relevant Data.</span>
-            <span className='sm:block sm:h-28'> Together. </span>
+        <div className='mx-auto max-w-7xl text-center'>
+          <h1 className='bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-5xl font-extrabold text-transparent sm:text-7xl'>
+            dictumAI <br />
+            <span className='sm:block text-2xl sm:text-6xl py-6 '>
+              Only Relevant Data Matters.
+              <br />
+            </span>
+            <span className='sm:block sm:h-28 text-2xl sm:text-5xl pt-2 '>
+              AI Powered Search & Analysis.
+            </span>
           </h1>
 
-          <p className='mx-auto mt-4 max-w-xl sm:text-xl/relaxed'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga
-            ducimus numquam ea!
+          <p className='mx-auto mt-8 max-w-xl sm:text-xl/relaxed'>
+            Find, Query, Sort & Analyze Relevant Data Faster.
           </p>
 
           <div className='mt-8 flex flex-wrap justify-center gap-4'>
